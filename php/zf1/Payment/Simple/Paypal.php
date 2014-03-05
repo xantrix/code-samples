@@ -2,8 +2,7 @@
 class Xan_Payment_Simple_Paypal extends Xan_Payment_Simple_Abstract
 {
 	const GATEWAY_URL = 'https://www.paypal.com/cgi-bin/webscr';
-	 
-	
+
 	public function __construct()
 	{
         // Some default values of the class
@@ -13,16 +12,16 @@ class Xan_Payment_Simple_Paypal extends Xan_Payment_Simple_Abstract
 		// Populate $fields array with a few default
 		$this->addHtmlField('rm', '2');           // Return method = POST
 		$this->addHtmlField('cmd', '_xclick');  //Buy Now button
-		/* htmlPayment */			
+		/* htmlPayment */
 	}
-	
+
 	public function enableTestMode()
     {
-    	
-    }	
-	
+
+    }
+
     /**
-     * valida la notifica pagamento 
+     * valida la notifica pagamento
      */
 	public function validateIpn()
 	{
@@ -84,6 +83,6 @@ class Xan_Payment_Simple_Paypal extends Xan_Payment_Simple_Abstract
 			$this->logResults(false);
 			return false;
 		}
-	}   	
-	
+	}
+
 }

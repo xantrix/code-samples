@@ -3,7 +3,6 @@ require_once 'library/Xan/Payment/Api/Abstract.php';
 
 class Xan_Payment_Api_Paypal extends Xan_Payment_Api_Abstract
 {
-
     const PAYMENT_ACTION_SALE          = 'Sale';
     const PAYMENT_ACTION_AUTHORIZATION = 'Authorization';
 
